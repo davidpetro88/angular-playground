@@ -1,5 +1,5 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
 import {TypographyComponent} from "./typography/typography.component";
 import {ButtonsComponent} from "./buttons/buttons.component";
 import {ButtonToggleComponent} from "./button-toggle/button-toggle.component";
@@ -12,6 +12,14 @@ import {ModePushComponent} from "./side-nav/mode-push/mode-push.component";
 import {ModeOverComponent} from "./side-nav/mode-over/mode-over.component";
 import {ModeSideComponent} from "./side-nav/mode-side/mode-side.component";
 import {MenuComponent} from "./menu/menu.component";
+import {ListComponent} from "./list/list.component";
+import {DividerComponent} from "./divider/divider.component";
+import {GridComponent} from "./grid/grid.component";
+import {RowHeightComponent} from "./grid/row-height/row-height.component";
+import {RowHeightFitComponent} from "./grid/row-height-fit/row-height-fit.component";
+import {ExpansionComponent} from "./expansion/expansion.component";
+import {CardComponent} from "./card/card.component";
+import {TabsComponent} from "./tabs/tabs.component";
 
 const routes: Routes = [
   {
@@ -61,6 +69,38 @@ const routes: Routes = [
   {
     path: 'menu',
     component: MenuComponent,
+  },
+  {
+    path: 'list',
+    component: ListComponent,
+  },
+  {
+    path: 'divider',
+    component: DividerComponent,
+  },
+  {
+    path: 'grid',
+    component: GridComponent,
+  },
+  {
+    path: 'grid/row-height',
+    component: RowHeightComponent,
+  },
+  {
+    path: 'grid/row-height-fit',
+    component: RowHeightFitComponent,
+  },
+  {
+    path: 'expansion',
+    component: ExpansionComponent,
+  },
+  {
+    path: 'card',
+    component: CardComponent,
+  },
+  {
+    path: 'tabs',
+    component: TabsComponent,
   },
 ];
 

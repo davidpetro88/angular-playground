@@ -18,6 +18,14 @@ import { ModeOverComponent } from './side-nav/mode-over/mode-over.component';
 import { ModePushComponent } from './side-nav/mode-push/mode-push.component';
 import { ModeSideComponent } from './side-nav/mode-side/mode-side.component';
 import { MenuComponent } from './menu/menu.component';
+import { ListComponent } from './list/list.component';
+import { DividerComponent } from './divider/divider.component';
+import { GridComponent } from './grid/grid.component';
+import { RowHeightComponent } from './grid/row-height/row-height.component';
+import { RowHeightFitComponent } from './grid/row-height-fit/row-height-fit.component';
+import { ExpansionComponent } from './expansion/expansion.component';
+import { CardComponent } from './card/card.component';
+import { TabsComponent } from './tabs/tabs.component';
 
 
 @NgModule({
@@ -34,7 +42,15 @@ import { MenuComponent } from './menu/menu.component';
     ModeOverComponent,
     ModePushComponent,
     ModeSideComponent,
-    MenuComponent
+    MenuComponent,
+    ListComponent,
+    DividerComponent,
+    GridComponent,
+    RowHeightComponent,
+    RowHeightFitComponent,
+    ExpansionComponent,
+    CardComponent,
+    TabsComponent
   ],
   imports: [
     BrowserModule,
