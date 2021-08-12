@@ -1,0 +1,23 @@
+<mat-progress-spinner value="0"></mat-progress-spinner>
+<mat-progress-spinner value="40"></mat-progress-spinner>
+<mat-progress-spinner value="100"></mat-progress-spinner>
+
+
+<div>
+  <mat-spinner value="100"></mat-spinner>
+</div>
+
+<div class="mat-display-2"> Fake load </div>
+
+<div>
+  <mat-spinner *ngIf="showSpinner"></mat-spinner>
+  <button (click)="loadData()">Load</button>
+</div>
+
+<div class="mat-display-2"> Fake load Color Accent</div>
+
+<div>
+  <mat-spinner *ngIf="showSpinner" color="accent"></mat-spinner>
+  <button (click)="loadData()">Load</button>
+</div>
+

@@ -1,0 +1,17 @@
+<!--<mat-sidenav-container>-->
+<!--  <mat-sidenav opened>SideNav</mat-sidenav>-->
+<!--  <mat-sidenav-content>Main</mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->
+<!--<mat-sidenav-container>-->
+<!--  <mat-sidenav [(opened)]="opened">SideNav</mat-sidenav>-->
+<!--  <mat-sidenav-content>Main-->
+<!--    <button (click)="opened=!opened">Toggle Opened</button>-->
+<!--  </mat-sidenav-content>-->
+<!--</mat-sidenav-container>-->
+
+<mat-sidenav-container>
+  <mat-sidenav mode="over"  [(opened)]="opened">SideNav</mat-sidenav>
+  <mat-sidenav-content>Main
+    <button (click)="opened=!opened">Toggle Opened</button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
