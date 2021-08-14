@@ -1,0 +1,32 @@
+<form>
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="auto">
+    <mat-autocomplete #auto="matAutocomplete">
+      <mat-option *ngFor="let option of options" [value]="option">
+        {{option}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+<hr>
+<form>
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="autoCourse">
+    <mat-autocomplete #autoCourse="matAutocomplete" [displayWith]="displayFn">
+      <mat-option *ngFor="let course of objectOptions" [value]="course">
+        {{course.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>
+
+<form>
+  <mat-form-field>
+    <input type="text" matInput [matAutocomplete]="autoCourse2" [formControl]="myControl">
+    <mat-autocomplete #autoCourse2="matAutocomplete" [displayWith]="displayFn2">
+      <mat-option *ngFor="let courseFilter of filteredOptions | async" [value]="courseFilter">
+        {{courseFilter.name}}
+      </mat-option>
+    </mat-autocomplete>
+  </mat-form-field>
+</form>

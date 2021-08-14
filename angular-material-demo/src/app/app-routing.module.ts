@@ -20,6 +20,20 @@ import {RowHeightFitComponent} from "./grid/row-height-fit/row-height-fit.compon
 import {ExpansionComponent} from "./expansion/expansion.component";
 import {CardComponent} from "./card/card.component";
 import {TabsComponent} from "./tabs/tabs.component";
+import {HorizontalComponent} from "./stepper/horizontal/horizontal.component";
+import {LinearComponent} from "./stepper/horizontal/linear/linear.component";
+import {VerticalComponent} from "./stepper/horizontal/vertical/vertical.component";
+import {FormComponent} from "./form/form.component";
+import { SelectComponent } from './select/select.component';
+import {AutocompleteComponent} from "./autocomplete/autocomplete.component";
+import {CheckboxComponent} from "./checkbox/checkbox.component";
+import {RadioComponent} from "./radio/radio.component";
+import {DatepickerComponent} from "./datepicker/datepicker.component";
+import {TooltipComponent} from "./tooltip/tooltip.component";
+import {SnackBarComponent} from "./snack-bar/snack-bar.component";
+import {DialogComponent} from "./dialog/dialog.component";
+import {TableComponent} from "./table/table.component";
+import {ScrollingComponent} from "./scrolling/scrolling.component";
 
 const routes: Routes = [
   {
@@ -101,6 +115,62 @@ const routes: Routes = [
   {
     path: 'tabs',
     component: TabsComponent,
+  },
+  {
+    path: 'stepper/horizontal',
+    component: HorizontalComponent,
+  },
+  {
+    path: 'stepper/horizontal/linear',
+    component: LinearComponent,
+  },
+  {
+    path: 'stepper/horizontal/vertical',
+    component: VerticalComponent,
+  },
+  {
+    path: 'form',
+    component: FormComponent,
+  },
+  {
+    path: 'select',
+    component: SelectComponent,
+  },
+  {
+    path: 'autocomplete',
+    component: AutocompleteComponent,
+  },
+  {
+    path: 'checkbox',
+    component: CheckboxComponent,
+  },
+  {
+    path: 'radio',
+    component: RadioComponent,
+  },
+  {
+    path: 'date-picker',
+    component: DatepickerComponent,
+  },
+  {
+    path: 'tooltip',
+    component: TooltipComponent,
+  },
+  {
+    path: 'snak-bar',
+    component: SnackBarComponent,
+  },
+  {
+    path: 'dialog',
+    component: DialogComponent,
+  },
+  {
+    path: 'table',
+    component: TableComponent,
+  },
+  {
+    path: 'scrolling',
+    component: ScrollingComponent,
   },
 ];
 
