@@ -1,0 +1,4 @@
+<div *ngIf="dogs$ | async as dogs" >
+  <app-dog *ngFor="let dog of dogs"  [name]="dog.name" [image]="dog.image" (add)="add($event)"></app-dog>
+</div>
+

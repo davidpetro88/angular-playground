@@ -1,0 +1,14 @@
+[
+  {
+    "name": "First Dog",
+    "image": "https://images.dog.ceo/breeds/affenpinscher/n02110627_10787.jpg"
+  },
+  {
+    "name": "Second Dog",
+    "image": "https://images.dog.ceo/breeds/puggle/IMG_074532.jpg"
+  },
+  {
+    "name": "Third Dog",
+    "image": "https://images.dog.ceo/breeds/terrier-yorkshire/n02094433_1177.jpg"
+  }
+]

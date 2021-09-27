@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Angular WebComponent Demo 1</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="dogs.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="box1">
+    <h1> Angular web component example</h1>
+  </div>
+  <div class="box2">
+    <app-dog id="1" name="Nhonho" image="https://images.dog.ceo/breeds/schipperke/n02104365_9248.jpg"></app-dog>
+  </div>
+  <div class="box3">
+    <div id="phrase"></div>
+  </div>
+  <div class="box3">
+      <div class="btn-group">
+        <button onclick="addStars()"> Add Stars </button>
+        <button onclick="removeStars()"> Remove Stars </button>
+      </div>
+  </div>
+  <div class="box">Footer 1</div>
+  <div class="box">Footer 2</div>
+  <div class="box">Footer 3</div>
+  <div class="box">Footer 4</div>
+  <div class="box1">
+    <h1> Footer</h1>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('app-dog-event', (val => {
+    console.log('my event listener -->',  val)
+    var div = document.getElementById('phrase');
+    div.innerHTML = `Listener message from web component --> ${val.detail.message} ${val.detail.name}`;
+  }), true);
+
+  function addStars() {
+    window.dispatchEvent(new CustomEvent('app-dog-add-stars', {detail: {star : true}}));
+  }
+
+  function removeStars() {
+    window.dispatchEvent(new CustomEvent('app-dog-add-stars', {detail: {star : false}}));
+  }
+</script>
+<script src="dogs.js" defer></script>
+</body>
+</html>

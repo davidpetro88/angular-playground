@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>AngularWebComponent</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link rel="stylesheet" href="dogs.css">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+<div class="wrapper">
+  <div class="box1">
+    <h1> Angular web component example</h1>
+    <div id="totalItem"></div>
+  </div>
+  <div class="box2">
+    <app-root></app-root>
+  </div>
+  <div class="box box3">Footer 1</div>
+  <div class="box box4">Footer 2</div>
+  <div class="box box5">Footer 3</div>
+  <div class="box box6">Footer 4</div>
+  <div class="box1">
+    <h1> Footer</h1>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('app-dog-add-event', (val => {
+    console.log('my event listener -->',  val)
+    var div = document.getElementById('totalItem');
+    div.innerHTML = `Listener message from web component --> ${val.detail.totalItem}`;
+    // div.innerHTML = `Listener message from web component --> ${val.detail.message} ${val.detail.name}`;
+  }), true);
+</script>
+
+<script src="dogs.js" defer></script>
+</body>
+</html>

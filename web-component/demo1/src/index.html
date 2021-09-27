@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Demo1</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body class="mat-typography">
+  <app-dog name="Nhonho" image="https://images.dog.ceo/breeds/schipperke/n02104365_9248.jpg"></app-dog>
+  <button onclick="addStars()"> Add Stars </button>
+  <button onclick="removeStars()"> Remove Stars </button>
+  <script>
+    window.addEventListener('app-dog-event', (val => {
+      console.log('my event listener -->',  val)
+      console.log('Detail -->',  `${val.detail.message} ${val.detail.name}`)
+    }), true);
+
+    function addStars() {
+      window.dispatchEvent(new CustomEvent('app-dog-add-stars', {detail: {star : true}}));
+    }
+
+    function removeStars() {
+      window.dispatchEvent(new CustomEvent('app-dog-add-stars', {detail: {star : false}}));
+    }
+
+  </script>
+</body>
+</html>

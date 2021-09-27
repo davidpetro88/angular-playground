@@ -1,0 +1,27 @@
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.wrapper .box1 {
+  background-color: #b0b0b0;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-template-columns: repeat(6, 1fr);
+  min-height: 120px;
+  text-align: center;
+}
+
+.wrapper .box2 {
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-template-columns: repeat(6, 1fr);
+  min-height: 100px;
+}
+
+.wrapper .box {
+  min-height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
