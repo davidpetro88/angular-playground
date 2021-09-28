@@ -2,7 +2,7 @@ import {Component, ElementRef, Input, OnChanges, OnDestroy, OnInit, SimpleChange
 import {MatSnackBar} from "@angular/material/snack-bar";
 
 @Component({
-  selector: 'app-dog',
+  selector: 'card-dog',
   templateUrl: './dog.component.html',
   styleUrls: ['./dog.component.scss'],
 })

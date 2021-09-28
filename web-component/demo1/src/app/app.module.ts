@@ -10,6 +10,7 @@ import {MatToolbarModule} from "@angular/material/toolbar";
 import {MatIconModule} from "@angular/material/icon";
 import {MatSnackBarModule} from "@angular/material/snack-bar";
 import {createCustomElement} from "@angular/elements";
+import { ElementZoneStrategyFactory } from 'elements-zone-strategy';
 
 @NgModule({
   declarations: [
@@ -30,14 +31,21 @@ import {createCustomElement} from "@angular/elements";
 })
 export class AppModule {
   constructor(private injector: Injector) {
+    const strategyFactory = new ElementZoneStrategyFactory(DogComponent, injector);
+    const webComponent = createCustomElement(DogComponent, {injector, strategyFactory});
+    customElements.define('card-dog', webComponent);
   }
 
-  ngDoBootstrap() {
-    // using createCustomElement from angular package it will convert angular component to stander web component
-    const el = createCustomElement(DogComponent, {
-      injector: this.injector
-    });
-    // using built in the browser to create your own custome element name
-    customElements.define('app-dog', el);
-  }
+  ngDoBootstrap() {}
+  // constructor(private injector: Injector) {
+  // }
+  //
+  // ngDoBootstrap() {
+  //   // using createCustomElement from angular package it will convert angular component to stander web component
+  //   const el = createCustomElement(DogComponent, {
+  //     injector: this.injector
+  //   });
+  //   // using built in the browser to create your own custome element name
+  //   customElements.define('card-dog', el);
+  // }
 }
